@@ -35,4 +35,13 @@ class MathController < ApplicationController
   def multiply_form
     render({ :template => "math_templates/multiplication_form.html.erb"})
   end
+
+  def divide_results
+    @first = params.fetch("first_num").to_f
+    @second = params.fetch("second_num").to_f
+
+    @result = @first / @second
+
+    render(:template => "math_templates/division_results.html.erb")
+  end
 end
