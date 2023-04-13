@@ -16,5 +16,6 @@ Rails.application.routes.draw do
 
   #Division
   get("/wizard_divide", { :controller => "math", :action => "divide_results"})
+  get("/divide", { :controller => "math", :action => "divide_form"})
 
 end
